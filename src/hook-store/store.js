@@ -1,9 +1,14 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 let globalState = {};
 let listeners = [];
 let actions = {};
 
 const useStore = () => {
- const setStore =  useState(globalState); 
+ const setState =  useState(globalState); 
+
+
+useEffect(() => {
+listeners.push(setState)
+},[])
 }
