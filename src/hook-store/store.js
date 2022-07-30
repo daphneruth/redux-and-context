@@ -5,5 +5,5 @@ let listeners = [];
 let actions = {};
 
 const useStore = () => {
-   useState(globalState); 
+ const setStore =  useState(globalState); 
 }
