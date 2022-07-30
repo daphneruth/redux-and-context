@@ -9,6 +9,10 @@ const useStore = () => {
 
 
 useEffect(() => {
-listeners.push(setState)
-},[])
+listeners.push(setState);
+
+return ()=> {
+    listeners = listeners.filter(li =>li !=setState);
+}
+},[setState])
 }
